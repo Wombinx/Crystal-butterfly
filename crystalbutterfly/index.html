@@ -1,0 +1,155 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <title>Crystal Butterfly</title>
+
+    <!-- STYLE -->
+    <link rel="stylesheet" href="styles/fontfaces.css" />
+    <link rel="stylesheet" href="styles/main.css" />
+    <link rel="stylesheet" href="styles/mobile.css"
+          media="screen and (max-device-width: 768px) and (orientation: portrait),
+                 screen and (max-device-width: 1024px) and (orientation: landscape)"/>
+
+    <link rel="shortcut icon" href="images/icons/alchemy-quest.ico">
+    <link rel="apple-touch-icon-precomposed" href="images/icons/ios-icon.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/icons/ios-icon-ipad.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/icons/ios-icon-iphone4.png"/>
+
+    <link rel="apple-touch-startup-image"
+          href="images/splashscreen/ios-startup-748x1024.png"
+          media="screen and (min-device-width: 768px) and (orientation:landscape)" />
+    <link rel="apple-touch-startup-image"
+          href="images/splashscreen/ios-startup-768x1004.png"
+          media="screen and (min-device-width: 768px) and (orientation:portrait)" />
+    <link rel="apple-touch-startup-image"
+          href="images/splashscreen/ios-startup-320x460.png"
+          media="screen and (max-device-width:320px)"/>
+
+    <meta name="apple-mobile-web-app-status-bar-style"
+          content="black" />
+
+    <!-- SCRIPTS -->
+    <script src="scripts/lib/jquery.min.js"></script>
+    <script src="scripts/lib/modernizr.js"></script>
+    <script src="scripts/loader.js"></script>
+<!--The following script tag downloads a font from the Adobe Edge Web Fonts server for use within the web page. We recommend that you do not modify it.--><script>var __adobewebfontsappname__="dreamweaver"</script><script src="http://use.edgefonts.net/tangerine:n4:default;nova-slim:n4:default.js" type="text/javascript"></script>
+</head>
+<body>
+    <div id="game">
+        <div class="background"><img src="images/Green-Landscape-002.png" width="550" height="768" alt=""/></div>
+
+        <!--  SPLASH SCREEN  -->
+        <div class="screen" id="splash-screen">
+            <h1 class="logo">Crystal<br/>Butterfly</h1>
+            <div class="progress">
+                <div class="indicator"></div>
+            </div>
+            <span class="continue"><img src="images/free-vector-knots-3.png" width="150" height="150" alt=""/><br>Click to continue</span>
+        </div>
+
+        <!--  INSTALL SCREEN  -->
+        <div class="screen" id="install-screen">
+            <h1 class="logo">Crystal<br/>Butterfly</h1>
+            <div>
+                <span>Wait <b id="timer">10</b> <i id="metrics">seconds</i></span>
+                <span>or</span>
+                <span>
+                    Click the <img src="images/icons/install-icon.png" alt="Install icon">
+                    button to install the game to your home screen
+               </span>
+            </div>
+        </div>
+
+        <!--  MAIN MENU SCREEN  -->
+        <div class="screen" id="main-menu">
+            <h2 class="logo">Crystal<br/>Butterfly</h2>
+            <ul class="menu">
+                <li><button name="game-screen">Play</button>
+                <li><button name="hiscore">Highscore</button>
+                <li><button name="settings">Settings</button>
+                <li><button name="about">About</button>
+            </ul>
+        </div>
+
+        <!--  GAME SCREEN  -->
+        <div class="screen" id="game-screen">
+            <div class="game-board item-size">
+                <div class="announcement"></div>
+            </div>
+            <div class="game-info">
+                <label class="level">Level: <span></span></label>
+                <label class="score"><img src="images/10.png" width="30" height="30" alt=""/>Score: <span></span></label>
+                <label class="score"><img src="images/butterfly_02 copy.png" alt="" width="30" height="30"/>Score: <span></span></label>
+                <label class="difficulty"><span></span></label>
+            </div>
+
+            <div class="time progress"><div class="indicator"></div></div>
+
+            <footer>
+                <button name="exit">Exit</button>
+            </footer>
+
+            <div class="pause-overlay"></div>
+            <div class="alert-overlay"></div>
+        </div>
+
+        <!--  HIGH SCORE SCREEN  -->
+        <div class="screen" id="hiscore">
+            <h2 class="logo">High score</h2>
+            <ul class="difficulty">
+                <li><button name="easy" class="easy mode">Easy</button></li>
+                <li><button name="normal" class="active normal mode">Normal</button></li>
+                <li><button name="hard" class="hard mode">Hard</button></li>
+            </ul>
+            <ol class="score-list">
+            </ol>
+            <footer>
+                <button name="back">Back</button>
+            </footer>
+        </div>
+
+        <!--  SETTINGS SCREEN  -->
+        <div class="screen" id="settings">
+            <h2 class="logo">Settings</h2>
+            <div class="setting" >
+                <ul>
+                    <li>
+                        <label>Sound:</label>
+                        <button name="sound" class='on'>ON</button>
+                    </li>
+                    <li>
+                        <label>Difficulty:</label>
+                        <button name="difficulty" class='normal'>NORMAL</button>
+                    </li>
+                </ul>
+            </div>
+            <footer>
+                <button name="back">Back</button>
+            </footer>
+        </div>
+
+        <!--  ABOUT SCREEN  -->
+        <div class="screen" id="about">
+            <h2 class="logo">About</h2>
+            <div>
+                <p>Crystal Butterfly is an HTML5 game.</p>
+                <p>The goal of this game is to get the highest score.</p>
+                <p>You have match minimum 3 items vertically or horizontally
+                to win points.</p>
+                <p>When you arrive to a specific amount of points your level is increased.
+                You win more points and time decrease faster.</p>
+                <p>There are 3 modes of difficulty.</p>
+                <p>Each week the score board will be reveiwed and the highest scorer will win a 25% discount. Be sure to fill out our form so we can varify your win.</p>
+            </div>
+            <footer>
+                <button name="back">Back</button>
+            </footer>
+        </div>
+
+        <div id="item-proto" class="item-size"></div>
+    </div>
+</body>
+</html>

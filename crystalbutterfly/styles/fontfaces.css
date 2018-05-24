@@ -1,0 +1,14 @@
+@font-face {
+    font-family: "Lithos Regular";
+    font-weight: normal;
+    font-style: normal;
+    src: url("../fonts/LithosPro-Regular.woff") format("woff"),
+    url("../fonts/LithosPro-Regular.ttf") format("truetype");
+}
+@font-face {
+    font-family: "Lithos Black";
+    font-weight: normal;
+    font-style: normal;
+    src: url("../fonts/LithosPro-Black.woff") format("woff"),
+    url("../fonts/LithosPro-Black.ttf") format("truetype");
+}
